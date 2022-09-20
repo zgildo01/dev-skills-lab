@@ -7,7 +7,7 @@ const studentSchema = new Schema({
   enrolled: Boolean,
 })
 
-const Student = mongoose.model('Todo', studentSchema);
+const Student = mongoose.model('Student', studentSchema);
 
 export {
   Student
