@@ -11,11 +11,12 @@
   <ul>
     <% students.forEach(student => { %>
       <li>
-        <%= student.name %>
+        <a href="/students/<%= student._id %>"><%= student.name %></a>
         is a student:
-        <%= student.enrolled %>
+        <%= student.enrolled ? "Enrolled" : "Not enrolled" %>
       </li>
-    <% }); %>
-  </ul>
+      <% }); %>
+    </ul>
+    <a href="/students/new">Add Student</a>
 </body>
 </html>
