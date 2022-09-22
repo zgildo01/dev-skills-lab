@@ -29,6 +29,10 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use(function(req, res, next) {
+  req.time = new Date().toLocaleTimeString()
+  next()
+})
 
 // mounted routers
 app.use('/', indexRouter)

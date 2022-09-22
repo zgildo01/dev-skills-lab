@@ -4,7 +4,8 @@ function index(req, res) {
   Student.find({})
   .then(students => {
     res.render('students/index', {
-      students: students
+      students: students,
+      time: req.time
     })
   })
   .catch(error => {
